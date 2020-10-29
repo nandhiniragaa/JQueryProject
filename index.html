@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Chattig Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/Chat2.css">
+ 
+
+    <script>
+        $(document).ready(function() {
+
+            var Time = new Date()
+            var textTime = Time.getHours() + ":" + Time.getMinutes()
+
+            $("#snd").click(function() {
+                var msg = document.getElementById("txt1").value
+
+                $("#us1").append("<p style=\"float:right\">" + msg + " " + "<span style='font-size:10px'>" + textTime + "</span>" + "</p><br><br><br>")
+                $("#us2").append("<p style=\"float:left\">" + msg + " " + "<span style='font-size:10px'>" + textTime + "</span>" + "</p><br><br><br>")
+                scrolfunction();
+            })
+            $("#snd1").click(function() {
+                var msg1 = document.getElementById("txt2").value
+
+                $("#us1").append("<p style=\"float:left\">" + msg1 + " " + "<span style='font-size:10px'>" + textTime + "</span>" + "</p><br><br><br>")
+                $("#us2").append("<p style=\"float:right\">" + msg1 + " " + "<span style='font-size:10px'>" + textTime + "</span>" + "</p><br><br><br>")
+                scrolfunction1();
+            })
+        })
+
+        function scrolfunction() {
+            var element1 = document.getElementById("txt1")
+            element1.scrollTop = element1.scrollHeight
+        }
+
+        function scrolfunction1() {
+            var element2 = document.getElementById("txt2")
+            element2.scrollTop = element2.scrollHeight
+        }
+    </script>
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <section>
+        <div>
+            <div id="Makku">
+                <div id="img11">&nbsp;&nbsp;<img src="img/b1.jpg" alt="" style="width:100px;height: 80px; border-radius: 100%;"> </div> 
+                <div id="lm"> <p>Makku</p></div>
+                <div id="top"> 
+                    <i class="fa fa-video-camera" style="font-size:36px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-phone" style="font-size:36px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-ellipsis-v" style="font-size:36px"></i>
+                </div>
+            </div>
+            <div id="us1"> 
+
+            </div>
+        </div>
+    </section>
+
+    
+    <aside>
+        <div>
+            <div id="Lechu">
+                <div id="img11"> &nbsp;&nbsp;<img src="img/g3.jpg" alt="" style="width:100px;height: 80px;border-radius: 100%;"> </div>
+                <div id="lm"> <p>Lechu</p></div>
+                <div id="top"> 
+                    <i class="fa fa-video-camera" style="font-size:36px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-phone" style="font-size:36px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-ellipsis-v" style="font-size:36px"></i>
+                </div>
+            </div>
+            <div id="us2">
+               
+            </div>
+        </div>
+    </aside>
+
+
+    
+    <div id="bottom1"> 
+        <div id="smile1"><i class="fa fa-smile-o" style="font-size:34px"></i></div>
+
+        <div  id="footer1">
+            <input type="text" id="txt1" placeholder=" Type Message...">&nbsp;&nbsp;
+            <img src="img/right-arrow.png" style="height: 20px; width: 26px;" id="snd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-paperclip" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-camera" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-microphone" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       </div>    
+    </div>
+
+    <div id="bottom2">
+        <div id="smile2"><i class="fa fa-smile-o" style="font-size:34px"></i></div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <div id="footer2">
+            <input type="text" id="txt2" placeholder=" Type Message...">&nbsp;&nbsp;
+            <img src="img/right-arrow.png" style="height: 20px; width: 26px;" id="snd1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-paperclip" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-camera" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="fa fa-microphone" style="font-size:24px"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+    
+    
+
+
+</body>
+
+</html>
+
+
